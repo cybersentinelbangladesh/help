@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Sentinel Bangladesh | Ethical Cybersecurity Experts</title>
+    <meta name="description" content="Bangladesh's premier ethical hacking and cybersecurity experts providing cutting-edge digital protection services">
+    <meta name="keywords" content="ethical hacking, cybersecurity, Bangladesh, penetration testing, vulnerability assessment">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+:root {
+  --primary: #00ff41;
+  --secondary: #00ffff;
+  --accent: #00b7ff;
+  --dark: #0a0a0a;
+  --darker: #050505;
+  --text: #e0e0e0;
+  --matrix-green: #00ff41;
+  --hacker-red: #ff0033;
+}
+
+body {
+  margin: 0;
+  background-color: var(--dark);
+  color: var(--text);
+  font-family: 'Noto Sans Bengali', 'Titillium Web', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+body.english {
+  font-family: 'Share Tech Mono', 'Titillium Web', monospace;
+}
+
+/* Language Switch */
+.language-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+}
+.lang-btn {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--matrix-green);
+  color: var(--text);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Share Tech Mono', monospace;
+  transition: all 0.3s ease;
+}
+.lang-btn:hover {
+  background: var(--matrix-green);
+  color: var(--dark);
+}
+.lang-btn.active {
+  background: var(--matrix-green);
+  color: var(--dark);
+  font-weight: bold;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  padding: 80px 20px 40px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+  background: linear-gradient(to bottom, var(--darker), rgba(10, 10, 10, 0.8));
+  position: relative;
+  overflow: hidden;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(0, 255, 65, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(0, 255, 255, 0.05) 0%, transparent 50%);
+  z-index: -1;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+.logo-link {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.logo-link:hover {
+  transform: scale(1.05);
+}
+.logo-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--matrix-green);
+  box-shadow: 0 0 25px var(--matrix-green);
+  object-fit: contain;
+  background-color: var(--darker);
+  padding: 5px;
+  transition: all 0.5s ease;
+  animation: pulse 4s ease-in-out infinite;
+}
+.logo-img:hover {
+  animation: float 3s ease-in-out infinite;
+  box-shadow: 0 0 30px var(--matrix-green);
+}
+.logo-text {
+  text-align: center;
+  margin-top: 20px;
+}
+.logo-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--matrix-green);
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+  letter-spacing: 1px;
+  font-family: 'Share Tech Mono', monospace;
+}
+.logo-text p {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  margin: 10px 0 0;
+  font-weight: 300;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Animation Keyframes */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Hacking Terminal Effect */
+.terminal-effect {
+  max-width: 800px;
+  margin: 30px auto 0;
+  padding: 20px;
+  background: rgba(0, 10, 5, 0.7);
+  border: 1px solid var(--matrix-green);
+  border-radius: 5px;
+  font-family: 'Share Tech Mono', monospace;
+  position: relative;
+  overflow: hidden;
+}
+.terminal-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--matrix-green), transparent);
+}
+.terminal-effect::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--matrix-green), transparent);
+}
+.terminal-text {
+  color: var(--matrix-green);
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--matrix-green);
+  animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+  margin: 0 auto;
+}
+
+/* Navigation */
+nav {
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+}
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+  font-family: 'Share Tech Mono', monospace;
+}
+.nav-links a:hover {
+  color: var(--matrix-green);
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--matrix-green);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Mission Statement */
+.mission-statement {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(0, 20, 10, 0.3);
+  border-left: 4px solid var(--hacker-red);
+  border-right: 4px solid var(--hacker-red);
+  position: relative;
+}
+.mission-statement::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--hacker-red), transparent);
+}
+.mission-statement::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--hacker-red), transparent);
+}
+.mission-statement blockquote {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--secondary);
+  margin: 0;
+  line-height: 1.8;
+  text-align: center;
+}
+.mission-statement cite {
+  display: block;
+  text-align: right;
+  font-style: normal;
+  color: var(--matrix-green);
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+/* Core Values */
+.values-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.values-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.values-title h2 {
+  font-size: 2.2rem;
+  color: var(--matrix-green);
+  display: inline-block;
+  margin: 0;
+  padding: 0 30px;
+  position: relative;
+  font-family: 'Share Tech Mono', monospace;
+}
+.values-title h2::before,
+.values-title h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(to right, var(--matrix-green), transparent);
+}
+.values-title h2::before {
+  left: -50px;
+}
+.values-title h2::after {
+  right: -50px;
+  background: linear-gradient(to left, var(--matrix-green), transparent);
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.value-card {
+  background: rgba(10, 20, 15, 0.5);
+  border-radius: 8px;
+  padding: 30px;
+  border: 1px solid rgba(0, 255, 65, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 255, 65, 0.1);
+  border-color: rgba(0, 255, 65, 0.4);
+}
+.value-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--matrix-green), var(--accent));
+}
+.value-icon {
+  font-size: 2.5rem;
+  color: var(--matrix-green);
+  margin-bottom: 20px;
+}
+.value-card h3 {
+  color: var(--secondary);
+  margin: 0 0 15px;
+  font-size: 1.5rem;
+}
+
+/* Objectives Section */
+.objectives-section {
+  background: linear-gradient(to bottom, rgba(0, 20, 15, 0.8), rgba(0, 10, 5, 0.9));
+  padding: 60px 20px;
+  position: relative;
+}
+.objectives-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--matrix-green), transparent);
+}
+.objectives-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section-header h2 {
+  font-size: 2.2rem;
+  color: var(--matrix-green);
+  margin: 0 0 15px;
+  font-family: 'Share Tech Mono', monospace;
+}
+.section-header p {
+  color: var(--text);
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.objective-card {
+  background: rgba(0, 30, 20, 0.3);
+  border-radius: 8px;
+  padding: 30px;
+  border: 1px solid rgba(0, 255, 65, 0.1);
+  transition: all 0.3s ease;
+}
+.objective-card:hover {
+  background: rgba(0, 40, 25, 0.5);
+  transform: translateY(-5px);
+}
+.objective-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: var(--matrix-green);
+  color: var(--dark);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family: 'Share Tech Mono', monospace;
+}
+.objective-card h3 {
+  color: var(--secondary);
+  margin: 0 0 15px;
+  font-size: 1.3rem;
+}
+
+/* Services Section */
+.services-section {
+  padding: 80px 20px;
+  background: var(--darker);
+}
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+.service-card {
+  background: rgba(15, 25, 20, 0.7);
+  border-radius: 10px;
+  padding: 30px;
+  border: 1px solid rgba(0, 255, 65, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 255, 65, 0.1);
+  animation: pulse 0.5s ease;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to right, var(--matrix-green), var(--accent));
+}
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--matrix-green);
+  margin-bottom: 20px;
+}
+.service-card h3 {
+  color: var(--secondary);
+  margin: 0 0 15px;
+  font-size: 1.4rem;
+}
+
+/* Call to Action */
+.cta-section {
+  background: linear-gradient(to right, rgba(0, 20, 15, 0.8), rgba(0, 10, 20, 0.8));
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--matrix-green), transparent);
+}
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.cta-container h2 {
+  font-size: 2.5rem;
+  color: var(--matrix-green);
+  margin: 0 0 20px;
+  font-family: 'Share Tech Mono', monospace;
+}
+.cta-container p {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: linear-gradient(to right, var(--matrix-green), var(--accent));
+  color: var(--dark);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: 'Share Tech Mono', monospace;
+}
+.btn:hover {
+  background: linear-gradient(to right, var(--accent), var(--matrix-green));
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+  transform: translateY(-3px);
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--matrix-green);
+  color: var(--matrix-green);
+}
+.btn-outline:hover {
+  background: var(--matrix-green);
+  color: var(--dark);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to bottom, var(--darker), #000);
+  padding: 60px 20px 30px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 255, 65, 0.1);
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  text-align: left;
+}
+.footer-column h3 {
+  color: var(--secondary);
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+  font-family: 'Share Tech Mono', monospace;
+}
+.footer-column h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(to right, var(--matrix-green), transparent);
+}
+.contact-info {
+  margin-top: 20px;
+}
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+.contact-icon {
+  color: var(--matrix-green);
+  margin-right: 10px;
+  font-size: 1.2rem;
+  margin-top: 3px;
+}
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 255, 65, 0.1);
+}
+.copyright {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Flag Animation */
+.flag {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 50px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg");
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  animation: wave 3s infinite ease-in-out;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.flag:hover {
+  transform: scale(1.1);
+}
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  50% { transform: rotate(1deg) translateY(-5px); }
+}
+
+/* Binary Rain Animation */
+.binary-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+/* Particle Effects */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: var(--matrix-green);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: float 15s ease-in-out infinite;
+}
+
+/* Message Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content {
+  background-color: var(--darker);
+  margin: 10% auto;
+  padding: 30px;
+  border: 1px solid var(--matrix-green);
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+}
+.close {
+  color: var(--text);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: var(--hacker-red);
+}
+.modal h3 {
+  color: var(--matrix-green);
+  margin-top: 0;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 5px;
+  color: var(--secondary);
+}
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  color: var(--text);
+  border-radius: 4px;
+}
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+.submit-btn {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .logo-text h1 {
+    font-size: 2rem;
+  }
+  .mission-statement blockquote {
+    font-size: 1.1rem;
+  }
+  .values-title h2 {
+    font-size: 1.8rem;
+  }
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  .cta-container h2 {
+    font-size: 2rem;
+  }
+  .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+  .nav-links {
+    gap: 15px;
+  }
+  .language-switch {
+    top: 10px;
+    right: 10px;
+  }
+  .modal-content {
+    margin: 20% auto;
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .logo-text h1 {
+    font-size: 1.8rem;
+  }
+  .logo-img {
+    width: 100px;
+    height: 100px;
+  }
+  .mission-statement {
+    padding: 20px;
+  }
+  .values-title h2::before,
+  .values-title h2::after {
+    width: 30px;
+  }
+  .values-title h2::before {
+    left: -30px;
+  }
+  .values-title h2::after {
+    right: -30px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .terminal-text {
+    white-space: normal;
+    border-right: none;
+    animation: none;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+    </style>
+</head>
+<body class="bangla">
+    <div class="language-switch">
+        <button id="banglaBtn" class="lang-btn active">বাংলা</button>
+        <button id="englishBtn" class="lang-btn">English</button>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <a href="https://cybersentinelbangladesh.com" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqYfieyUu_nKVGzUhhqTu7_lueDyVx6QwgjYHvrWNrIHqUUMwHV3eS9iX51w4jQVWZuhHli8tLAIZalklumtfzurXixncr371q4KU_iZu7dCXwfloxVI8WciPfSOwsRBNhwG6vpL3-kF3JLoLpIngPELYe91W2_n0u0FTAYF8GlwFuUxsiLOLEltPvYyo/s1280/20250614_021418.png" alt="Cyber Sentinel Bangladesh Logo" class="logo-img">
+            </a>
+            <div class="logo-text">
+                <h1>Cyber Sentinel Bangladesh</h1>
+                <p class="bangla-text">বাংলাদেশের নৈতিক হ্যাকিং ও সাইবার নিরাপত্তা বিশেষজ্ঞ</p>
+                <p class="english-text" style="display:none">Ethical Hacking & Cybersecurity Experts of Bangladesh</p>
+            </div>
+        </div>
+
+        <div class="terminal-effect">
+            <div class="terminal-text bangla-text">$ বাংলাদেশের সাইবার নিরাপত্তা রক্ষায় আমরা সদা তৎপর...</div>
+            <div class="terminal-text english-text" style="display:none">$ Protecting Bangladesh's cyberspace 24/7...</div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link"><span class="bangla-text">আমাদের সম্পর্কে</span><span class="english-text" style="display:none">About Us</span></a></li>
+                <li><a href="#values" class="nav-link"><span class="bangla-text">আমাদের মূল্যবোধ</span><span class="english-text" style="display:none">Our Values</span></a></li>
+                <li><a href="#objectives" class="nav-link"><span class="bangla-text">আমাদের লক্ষ্য</span><span class="english-text" style="display:none">Objectives</span></a></li>
+                <li><a href="#services" class="nav-link"><span class="bangla-text">আমাদের সেবা</span><span class="english-text" style="display:none">Services</span></a></li>
+                <li><a href="#contact" class="nav-link"><span class="bangla-text">যোগাযোগ</span><span class="english-text" style="display:none">Contact</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="about" class="mission-statement">
+        <blockquote>
+            <p class="bangla-text">"জ্ঞান শক্তি, কিন্তু নীতিহীন হলে তা হুমকি। আমরা নৈতিক হ্যাকার - বাংলাদেশের সাইবার নিরাপত্তার রক্ষক।"</p>
+            <p class="english-text" style="display:none">"Knowledge is power, but without ethics, it's a threat. We are ethical hackers - guardians of Bangladesh's cybersecurity."</p>
+        </blockquote>
+        <cite>Cyber Sentinel Bangladesh</cite>
+    </section>
+
+    <section id="values" class="values-container">
+        <div class="values-title">
+            <h2 class="bangla-text">আমাদের মূল্যবোধ</h2>
+            <h2 class="english-text" style="display:none">Our Core Values</h2>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3 class="bangla-text">নৈতিক দায়িত্ব</h3>
+                <h3 class="english-text" style="display:none">Ethical Responsibility</h3>
+                <p class="bangla-text">আমরা নৈতিক হ্যাকিং ও সাইবার নিরাপত্তার সর্বোচ্চ মানদণ্ড মেনে চলি। আমাদের সকল কার্যক্রম আইনগত ও নৈতিক কাঠামোর মধ্যে সম্পন্ন হয়।</p>
+                <p class="english-text" style="display:none">We adhere to the highest standards of ethical hacking and cybersecurity. All our operations are conducted within legal and ethical frameworks.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3 class="bangla-text">সুরক্ষা প্রথম</h3>
+                <h3 class="english-text" style="display:none">Security First</h3>
+                <p class="bangla-text">আমরা বিশ্বাস করি প্রতিরোধই সর্বোত্তম প্রতিকার। সাইবার হুমকি মোকাবেলার চেয়ে সেগুলো প্রতিরোধ করাই আমাদের প্রধান লক্ষ্য।</p>
+                <p class="english-text" style="display:none">We believe prevention is the best cure. Our primary goal is to prevent cyber threats rather than just responding to them.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="bangla-text">জ্ঞান বিতরণ</h3>
+                <h3 class="english-text" style="display:none">Knowledge Sharing</h3>
+                <p class="bangla-text">আমরা সাইবার নিরাপত্তা জ্ঞান উন্মুক্তভাবে শেয়ার করি। বাংলাদেশের প্রতিটি নাগরিক যেন ডিজিটাল নিরাপত্তা সম্পর্কে সচেতন হয় তা নিশ্চিত করাই আমাদের লক্ষ্য।</p>
+                <p class="english-text" style="display:none">We openly share cybersecurity knowledge. Our aim is to ensure every citizen of Bangladesh is aware of digital security.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="objectives" class="objectives-section">
+        <div class="objectives-container">
+            <div class="section-header">
+                <h2 class="bangla-text">আমাদের লক্ষ্য</h2>
+                <h2 class="english-text" style="display:none">Our Objectives</h2>
+                <p class="bangla-text">বাংলাদেশের সাইবার নিরাপত্তা ইকোসিস্টেমকে শক্তিশালী করতে আমরা নিম্নলিখিত লক্ষ্যগুলো নিয়ে কাজ করছি</p>
+                <p class="english-text" style="display:none">We are working with the following objectives to strengthen Bangladesh's cybersecurity ecosystem</p>
+            </div>
+
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <div class="objective-number">১</div>
+                    <h3 class="bangla-text">সচেতনতা বৃদ্ধি</h3>
+                    <h3 class="english-text" style="display:none">Awareness Building</h3>
+                    <p class="bangla-text">সারা বাংলাদেশ জুড়ে সাইবার নিরাপত্তা সচেতনতা বৃদ্ধি করা। সাধারণ ব্যবহারকারী থেকে প্রতিষ্ঠান পর্যন্ত সকল স্তরে নিরাপত্তা প্রশিক্ষণ প্রদান।</p>
+                    <p class="english-text" style="display:none">Increase cybersecurity awareness across Bangladesh. Provide security training at all levels from individual users to organizations.</p>
+                </div>
+                <div class="objective-card">
+                    <div class="objective-number">২</div>
+                    <h3 class="bangla-text">যুবসমাজের উন্নয়ন</h3>
+                    <h3 class="english-text" style="display:none">Youth Development</h3>
+                    <p class="bangla-text">তরুণ প্রজন্মকে নৈতিক হ্যাকিং ও দায়িত্বশীল ডিজিটাল আচরণ সম্পর্কে শিক্ষিত ও অনুপ্রাণিত করা। কর্মশালা, সেমিনার ও প্রশিক্ষণের মাধ্যমে দক্ষতা উন্নয়ন।</p>
+                    <p class="english-text" style="display:none">Educate and inspire young generation about ethical hacking and responsible digital behavior. Develop skills through workshops, seminars and training.</p>
+                </div>
+                <div class="objective-card">
+                    <div class="objective-number">৩</div>
+                    <h3 class="bangla-text">গবেষণা ও উন্নয়ন</h3>
+                    <h3 class="english-text" style="display:none">Research & Development</h3>
+                    <p class="bangla-text">স্থানীয় সাইবার হুমকি সম্পর্কে গবেষণা করা এবং বাংলাদেশের জন্য উপযোগী সমাধান উদ্ভাবন। নতুন নতুন সাইবার নিরাপত্তা পদ্ধতি ও টুলস উন্নয়ন।</p>
+                    <p class="english-text" style="display:none">Research local cyber threats and develop suitable solutions for Bangladesh. Develop new cybersecurity methods and tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <div class="section-header">
+                <h2 class="bangla-text">আমাদের সেবা</h2>
+                <h2 class="english-text" style="display:none">Our Services</h2>
+                <p class="bangla-text">পেশাদার সাইবার নিরাপত্তা সেবা যা আপনার ডিজিটাল সম্পদ সুরক্ষিত রাখবে</p>
+                <p class="english-text" style="display:none">Professional cybersecurity services to protect your digital assets</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="bangla-text">ভালনারেবিলিটি অ্যাসেসমেন্ট</h3>
+                    <h3 class="english-text" style="display:none">Vulnerability Assessment</h3>
+                    <p class="bangla-text">আপনার সিস্টেম, নেটওয়ার্ক বা অ্যাপ্লিকেশনের দুর্বলতা শনাক্ত করুন এবং সেগুলো সমাধানের জন্য কার্যকরী পরামর্শ পান।</p>
+                    <p class="english-text" style="display:none">Identify vulnerabilities in your systems, networks or applications and get actionable recommendations to fix them.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="bangla-text">পেনিট্রেশন টেস্টিং</h3>
+                    <h3 class="english-text" style="display:none">Penetration Testing</h3>
+                    <p class="bangla-text">নৈতিক হ্যাকিং পদ্ধতিতে আপনার সিস্টেমের নিরাপত্তা পরীক্ষা করুন এবং সম্ভাব্য আক্রমণের পথগুলো বন্ধ করুন।</p>
+                    <p class="english-text" style="display:none">Test your system security using ethical hacking methods and close potential attack vectors.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="bangla-text">প্রশিক্ষণ কর্মসূচি</h3>
+                    <h3 class="english-text" style="display:none">Training Programs</h3>
+                    <p class="bangla-text">আপনার কর্মীদের জন্য কাস্টমাইজড সাইবার সিকিউরিটি প্রশিক্ষণ এবং সচেতনতা কর্মসূচি।</p>
+                    <p class="english-text" style="display:none">Customized cybersecurity training and awareness programs for your staff.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta-section">
+        <div class="cta-container">
+            <h2 class="bangla-text">আমাদের সাথে যুক্ত হোন</h2>
+            <h2 class="english-text" style="display:none">Join With Us</h2>
+            <p class="bangla-text">বাংলাদেশের সাইবার নিরাপত্তা ইকোসিস্টেমকে শক্তিশালী করতে আমাদের মিশনে অংশ নিন। প্রশিক্ষণ, সহযোগিতা বা পরামর্শের জন্য আজই যোগাযোগ করুন।</p>
+            <p class="english-text" style="display:none">Join our mission to strengthen Bangladesh's cybersecurity ecosystem. Contact us today for training, collaboration or consultation.</p>
+            
+            <div class="cta-buttons">
+                <a href="mailto:cybersentinelbangladesh@gmail.com" class="btn">
+                    <span class="bangla-text">ইমেইল করুন</span>
+                    <span class="english-text" style="display:none">Send Email</span>
+                </a>
+                <button id="messageBtn" class="btn btn-outline">
+                    <span class="bangla-text">মেসেজ করুন</span>
+                    <span class="english-text" style="display:none">Send Message</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Modal -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 class="bangla-text">আমাদের বার্তা পাঠান</h3>
+            <h3 class="english-text" style="display:none">Send Us a Message</h3>
+            <form class="contact-form" action="https://formspree.io/f/mvgraepa" method="POST">
+                <div class="form-group">
+                    <label for="name" class="bangla-text">আপনার নাম</label>
+                    <label for="name" class="english-text" style="display:none">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="bangla-text">ইমেইল</label>
+                    <label for="email" class="english-text" style="display:none">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="bangla-text">বার্তা</label>
+                    <label for="message" class="english-text" style="display:none">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn submit-btn bangla-text">বার্তা পাঠান</button>
+                <button type="submit" class="btn submit-btn english-text" style="display:none">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3 class="bangla-text">Cyber Sentinel Bangladesh</h3>
+                <p class="bangla-text">বাংলাদেশের ডিজিটাল নিরাপত্তার রক্ষক হিসেবে আমরা নিবেদিত। নৈতিক হ্যাকিং, গবেষণা এবং প্রশিক্ষণের মাধ্যমে আমরা একটি নিরাপদ ডিজিটাল বাংলাদেশ গড়ে তুলতে কাজ করছি।</p>
+                <p class="english-text" style="display:none">We are committed as guardians of Bangladesh's digital security. Through ethical hacking, research and training, we are working to build a secure digital Bangladesh.</p>
+            </div>
+            <div class="footer-column">
+                <h3 class="bangla-text">যোগাযোগ</h3>
+                <h3 class="english-text" style="display:none">Contact</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p>ঢাকা<br>বাংলাদেশ </p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p><a href="mailto:cybersentinelbangladesh@gmail.com">cybersentinelbangladesh@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; 2025 Cyber Sentinel Bangladesh. <span class="bangla-text">সকল অধিকার সংরক্ষিত।</span><span class="english-text" style="display:none">All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bangladesh Flag with National Anthem -->
+    <div class="flag" id="bdFlag"></div>
+    <audio id="nationalAnthem" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" preload="auto"></audio>
+
+    <script>
+        // Language Switch Functionality
+        function switchLanguage(lang) {
+            if (lang === 'english') {
+                document.body.classList.remove('bangla');
+                document.body.classList.add('english');
+                document.querySelectorAll('.english-text').forEach(el => el.style.display = '');
+                document.querySelectorAll('.bangla-text').forEach(el => el.style.display = 'none');
+                document.getElementById('englishBtn').classList.add('active');
+                document.getElementById('banglaBtn').classList.remove('active');
+            } else {
+                document.body.classList.remove('english');
+                document.body.classList.add('bangla');
+                document.querySelectorAll('.bangla-text').forEach(el => el.style.display = '');
+                document.querySelectorAll('.english-text').forEach(el => el.style.display = 'none');
+                document.getElementById('banglaBtn').classList.add('active');
+                document.getElementById('englishBtn').classList.remove('active');
+            }
+        }
+
+        document.getElementById('banglaBtn').addEventListener('click', function() {
+            switchLanguage('bangla');
+        });
+
+        document.getElementById('englishBtn').addEventListener('click', function() {
+            switchLanguage('english');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Binary Rain Animation
+        const canvas = document.createElement('canvas');
+        canvas.id = 'binaryRain';
+        canvas.className = 'binary-rain';
+        document.body.appendChild(canvas);
+
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const binary = '01';
+        const columns = Math.floor(canvas.width / 20);
+        const drops = [];
+
+        for (let i = 0; i < columns; i++) {
+            drops[i] = Math.floor(Math.random() * canvas.height);
+        }
+
+        function drawBinaryRain() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00ff41';
+            ctx.font = '15px Share Tech Mono';
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = binary.charAt(Math.floor(Math.random() * binary.length));
+                ctx.fillText(text, i * 20, drops[i] * 20);
+                
+                if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawBinaryRain, 50);
+
+        window.addEventListener('resize', function() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // Message Modal Functionality
+        const modal = document.getElementById('messageModal');
+        const btn = document.getElementById('messageBtn');
+        const span = document.getElementsByClassName('close')[0];
+
+        btn.onclick = function() {
+            modal.style.display = 'block';
+        }
+
+        span.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // National Anthem on Flag Click
+        const bdFlag = document.getElementById('bdFlag');
+        const nationalAnthem = document.getElementById('nationalAnthem');
+
+        bdFlag.addEventListener('click', function() {
+            if (nationalAnthem.paused) {
+                nationalAnthem.play().catch(e => {
+                    console.log("Autoplay prevented. Please interact with the page first.");
+                    if (document.body.classList.contains('english')) {
+                        alert("Please click anywhere on the page first, then click the flag to play the anthem.");
+                    } else {
+                        alert("অ্যানথেম বাজানোর জন্য প্রথমে পৃষ্ঠার যেকোনো স্থানে ক্লিক করুন, তারপর পতিকায় ক্লিক করুন।");
+                    }
+                });
+            } else {
+                nationalAnthem.pause();
+                nationalAnthem.currentTime = 0;
+            }
+        });
+
+        // Allow audio to play after any user interaction
+        document.body.addEventListener('click', function() {
+            // This empty handler just enables audio playback after any click
+        }, { once: true });
+
+        // Particle Effect
+        function createParticles() {
+            const particlesContainer = document.createElement('div');
+            particlesContainer.className = 'particles';
+            document.body.appendChild(particlesContainer);
+            
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const posX = Math.random() * window.innerWidth;
+                const posY = Math.random() * window.innerHeight;
+                const size = Math.random() * 3 + 1;
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                
+                particle.style.left = `${posX}px`;
+                particle.style.top = `${posY}px`;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize effects when page loads
+        window.addEventListener('load', function() {
+            createParticles();
+            
+            // Enhanced typing effect
+            const terminalText = document.querySelector('.terminal-text');
+            if (terminalText) {
+                terminalText.style.animation = 'typing 3.5s steps(40, end), blink 0.75s step-end infinite';
+            }
+        });
+
+        // Form Submission
+        const contactForm = document.querySelector('.contact-form');
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const response = await fetch('https://formspree.io/f/mvgraepa', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                if (document.body.classList.contains('english')) {
+                    alert('Thank you! Your message has been sent successfully.');
+                } else {
+                    alert('ধন্যবাদ! আপনার বার্তা সফলভাবে পাঠানো হয়েছে।');
+                }
+                contactForm.reset();
+                modal.style.display = 'none';
+            } else {
+                if (document.body.classList.contains('english')) {
+                    alert('Oops! There was a problem. Please try again later.');
+                } else {
+                    alert('দুঃখিত! সমস্যা হয়েছে। পরে আবার চেষ্টা করুন।');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
